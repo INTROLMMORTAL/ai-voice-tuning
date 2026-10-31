@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>AI Voice Tuning</title>
+<style>body{font:13px system-ui;margin:0;padding:12px;width:340px;background:#16181d;color:#e6e8ee}h1{font-size:14px;margin:0 0 8px}
+.row{display:flex;justify-content:space-between;gap:8px;margin:4px 0}.ok{color:#6ee7a0}.bad{color:#ff8a8a}.warn{color:#ffd166}select,button{background:#262a33;color:#e6e8ee;border:1px solid #3a3f4b;border-radius:6px;padding:5px 8px;font:inherit}
+ul{margin:6px 0;padding-left:16px}small{color:#9aa1b0}</style>
+<h1>AI Voice Tuning</h1><div id="st">Загрузка…</div><hr style="border-color:#2a2e38">
+<div class="row"><span>Режим</span><select id="mode"></select></div>
+<div class="row"><span>Обработка включена</span><input type="checkbox" id="on"></div>
+<div class="row"><span>Обход (bypass) — слышен оригинал</span><input type="checkbox" id="bp"></div>
+<div class="row"><span>Захват</span><select id="cap"><option value="page">как просит сайт</option><option value="raw">без браузерного NS/AGC</option></select></div>
+<div class="row"><button id="lab">Открыть Audio Lab / калибровка</button></div><small id="note"></small>
+<script type="module" src="popup.js"></script>

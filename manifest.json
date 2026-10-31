@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AI Voice Tuning",
+  "version": "0.2.0",
+  "description": "Локальная автонастройка исходящего микрофона. Аудио не покидает компьютер.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://nekto.me/*"],
+  "content_scripts": [
+    { "matches": ["https://nekto.me/*"], "js": ["src/nekto-integration/hook.js"], "run_at": "document_start", "world": "MAIN" },
+    { "matches": ["https://nekto.me/*"], "js": ["src/nekto-integration/bridge.js"], "run_at": "document_start" }
+  ],
+  "action": { "default_popup": "src/ui/popup.html", "default_title": "AI Voice Tuning" }
+}
